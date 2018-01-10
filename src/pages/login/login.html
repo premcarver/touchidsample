@@ -1,0 +1,24 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <!-- code goes here for any other login method like, email/password, social etc... -->
+
+  <!-- To make sure the Touch ID button only appears if Touch ID is available -->
+  <button (click)="startTouchID()" *ngIf="touchIdAvailable" round text-center></button>
+
+</ion-content>
