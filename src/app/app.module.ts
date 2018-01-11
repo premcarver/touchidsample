@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
+import { LocationTabsPage } from '../pages/location-tabs/location-tabs';
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 
 import { TouchID } from '@ionic-native/touch-id';
 import { Device } from '@ionic-native/device';
@@ -14,7 +17,8 @@ import { Device } from '@ionic-native/device';
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage
+    LoginPage,
+    LocationTabsPage
   ],
   imports: [
     BrowserModule,
@@ -23,14 +27,16 @@ import { Device } from '@ionic-native/device';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage
+    LoginPage,
+    LocationTabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     TouchID,
     Device,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    GoogleMaps,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
